@@ -27,9 +27,40 @@ function navBarFun() {
     return counter
   }
 
-  vm.markAsRead = function() {
+  vm.markAsRead = function(mail) {
     for (var i = 0; i < mail.length; i++) {
-      console.log('read works')
+      if (mail[i].selected==true) {
+        mail[i].read = true
+      }
     }
   }
+
+  vm.markAsUnread = function(mail) {
+    for (var i = 0; i < mail.length; i++) {
+      if (mail[i].selected==true) {
+        mail[i].read = false
+      }
+    }
+  }
+
+  vm.deleteMessage = function(mail) {
+    for (var i = mail.length-1; i >= 0; i--) {
+      if (mail[i].selected==true) {
+        mail.splice(i,1)
+      }
+    }
+  }
+
+  vm.allLabels = [{
+      "id": 1,
+      "label": "dev",
+    },
+    {
+      "id": 2,
+      "label": "personal",
+    },
+    {
+      "id": 3,
+      "label": "school",
+  }]
 }

@@ -16,11 +16,11 @@
           Mark As Read
         </button>
 
-        <button class="btn btn-default">
+        <button class="btn btn-default" ng-click="ctrl.markAsUnread($ctrl.binding)">
           Mark As Unread
         </button>
 
-        <select class="form-control label-select">
+        <select class="form-control label-select" ng-model="labels" ng-options="name.label as name.label for name in ctrl.allLabels track by name.id">
           <option>Apply label</option>
           <option value="dev">dev</option>
           <option value="personal">personal</option>
@@ -34,7 +34,7 @@
           <option value="gschool">gschool</option>
         </select>
 
-        <button class="btn btn-default">
+        <button class="btn btn-default" ng-click="ctrl.deleteMessage($ctrl.binding)">
           <i class="fa fa-trash-o"></i>
         </button>
       </div>
@@ -58,11 +58,11 @@
           <i class="fa fa-check-square-o"></i>
         </button>
 
-        <button class="btn btn-default">
+        <button class="btn btn-default" ng-click="ctrl.markAsRead($ctrl.binding)">
           Mark As Read
         </button>
 
-        <button class="btn btn-default">
+        <button class="btn btn-default" ng-click="ctrl.markAsUnread($ctrl.binding)">
           Mark As Unread
         </button>
 
@@ -80,7 +80,7 @@
           <option value="gschool">gschool</option>
         </select>
 
-        <button class="btn btn-default">
+        <button class="btn btn-default" ng-click="ctrl.deleteMessage($ctrl.binding)">
           <i class="fa fa-trash-o"></i>
         </button>
       </div>
