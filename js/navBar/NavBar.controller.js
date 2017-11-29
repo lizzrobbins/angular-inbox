@@ -63,4 +63,12 @@ function navBarFun() {
       "id": 3,
       "label": "school",
   }]
+
+  vm.applyLabel = function(selected) {
+    console.log(selected);
+  }
+
+  vm.removeLabel = function(selected) {
+    console.log(selected);
+  }
 }
